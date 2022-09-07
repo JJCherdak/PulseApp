@@ -35,12 +35,12 @@ class MainRecyclerAdapter:
 
         fun bind(item: Item, position: Int) {
             binding.apply {
-                if (position != 0) if (dataItems[position - 1].data == item.data) {
+                if (position != 0) if (dataItems[position - 1].date == item.date) {
                     data.visibility = View.GONE
                     line.visibility = View.GONE
                 }
                 time.text = item.time
-                data.text = item.data
+                data.text = item.date
                 pressure1.text = item.firstPressure.toString()
                 pressure2.text = item.secondPressure.toString()
                 pulse.text = item.pulse.toString()

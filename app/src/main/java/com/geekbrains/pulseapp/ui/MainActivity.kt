@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.requestPosts()
     }
 
-    fun showNewItemDialog() {
+    private fun showNewItemDialog() {
         val dialog = Dialog(this)
         val filterBinding = NewItemDialogLayoutBinding.inflate(layoutInflater)
         dialog.setContentView(filterBinding.root)

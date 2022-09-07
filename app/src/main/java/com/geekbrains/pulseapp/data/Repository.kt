@@ -9,5 +9,5 @@ import com.geekbrains.pulseapp.domain.Item
 interface Repository {
 
     fun getItems() : Single<List<Item>>
-    fun addItem(item: Item)
+    fun addItem(item: Item) : Single<List<Item>>
 }

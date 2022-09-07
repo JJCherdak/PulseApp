@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.geekbrains.pulseapp.data.Repository
-import com.geekbrains.pulseapp.data.RepositoryFake
+import com.geekbrains.pulseapp.data.RepositoryImpl
 import com.geekbrains.pulseapp.domain.Item
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MainViewModel (private val repo: Repository = RepositoryFake()) :
+class MainViewModel (private val repo: Repository = RepositoryImpl()) :
     ViewModel() {
     private val liveDataToObserve: MutableLiveData<List<Item>> = MutableLiveData(listOf())
 
@@ -32,5 +32,12 @@ class MainViewModel (private val repo: Repository = RepositoryFake()) :
 
     fun saveNewItem(item: Item) {
         repo.addItem(item)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                liveDataToObserve.postValue(it)
+            }, {
+
+            })
     }
 }
