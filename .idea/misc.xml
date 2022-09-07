@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/drawable/ic_monitor_heart.xml" value="0.1" />
+        <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/drawable/ic_plus.xml" value="0.1" />
+        <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
+        <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/layout/new_item_dialog_layout.xml" value="0.2421875" />
+        <entry key="..\:/x-files/programming/PulseApp/app/src/main/res/layout/recycler_item.xml" value="0.2421875" />
       </map>
     </option>
   </component>

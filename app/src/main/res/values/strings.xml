@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PulseApp</string>
+    <string name="default_data">07 сентября</string>
+    <string name="default_time">12:34</string>
 </resources>
